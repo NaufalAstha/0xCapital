@@ -49,7 +49,7 @@ body{
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 30px;
+    gap: 5vh;
 }
 
 .sidebar ul li a{
@@ -102,14 +102,18 @@ body{
 
 .main-content .container{
     display: flex;
-    flex-direction: column;
     text-align: center;
+    align-items: center;
     justify-content: center;
 
-    width: 20vh;
+    width: 100%;
+    height: 6vh;
     margin: 2vh;
     padding: 1vh;
+    gap: 1vh;
     
-    border-radius: 3vh;
+    border-radius: 2.5vh;
     background: #101010;
+
+    font-weight: bold;
 }
