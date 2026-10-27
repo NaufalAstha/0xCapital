@@ -52,6 +52,20 @@ body{
     padding: 10px 50px;
 }
 
+.sidebar button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 40px;
+    gap: 0px;
+}
+
+.sidebar button img{
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
 /* Main Content */
 .main-content{
     display: flex;
