@@ -1,6 +1,8 @@
 :root{
     --color : #f1f1f1;
     --background : #010101;
+    --secBackground : #101010;
+    --highlight : #FFB000;
 }
 
 body{
@@ -20,7 +22,7 @@ body{
 }
 
 .sidebar{
-    background: #101010;
+    background: var(--secBackground);
     color: var(--color);
 
     width: 250px;
@@ -35,8 +37,14 @@ body{
     font-size: 20px;
     font-weight: bold;
 
-    margin-bottom: 30px;
+    margin-bottom: 5vh;
     cursor: pointer;
+
+    transition: ease 0.3s;
+}
+
+.sidebar .logo:hover{
+    color: var(--highlight);
 }
 
 .sidebar aside{
@@ -113,7 +121,7 @@ body{
     gap: 1vh;
     
     border-radius: 2.5vh;
-    background: #101010;
+    background: var(--secBackground);
 
     font-weight: bold;
 }
