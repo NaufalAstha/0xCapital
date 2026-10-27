@@ -65,10 +65,10 @@ body{
     gap: 10px;
     margin-top: auto;
 
-    height: 30px;
-    width: 170px;
+    height: 1vh;
+    width: 20vh;
     border: none;
-    padding: 20px 10px;
+    padding: 3vh 1vh;
     border-radius: 15px;
 
     background: #010101;
@@ -78,8 +78,8 @@ body{
 }
 
 .sidebar button img{
-    width: 25px;
-    height: 25px;
+    width: 3vh;
+    height: 3vh;
     border-radius: 90px;
 }
 

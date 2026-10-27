@@ -3,5 +3,5 @@ document.getElementById("logo").addEventListener("click", function () {
 });
 
 document.getElementById("account-btn").addEventListener("click", function() {
-    window.location.href= "page/account.html";
+    window.location.href= "../page/account.html";
 });
