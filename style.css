@@ -91,4 +91,25 @@ body{
     justify-content: center;
 
     width: 100%;
+    gap: 2vh;
+}
+
+.main-content .topbar{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.main-content .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    width: 20vh;
+    margin: 2vh;
+    padding: 1vh;
+    
+    border-radius: 3vh;
+    background: #101010;
 }
