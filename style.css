@@ -47,23 +47,27 @@ body{
     text-decoration: none;
 }
 
-.sidebar aside ul li a:hover{
-    background: #050505;
-    padding: 10px 50px;
-}
-
 .sidebar button{
     display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 0px 40px;
-    gap: 0px;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+
+    height: 30px;
+    width: 170px;
+    border: none;
+    padding: 20px 10px;
+    border-radius: 15px;
+
+    background: #010101;
+    color: var(--color);
 }
 
 .sidebar button img{
     width: 30px;
     height: 30px;
-    border: none;
+    border-radius: 90px;
 }
 
 /* Main Content */
