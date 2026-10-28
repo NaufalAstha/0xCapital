@@ -131,4 +131,5 @@ body{
     border-radius: 1vh;
 
     background: #202020;
+    color: var(--color);
 }
