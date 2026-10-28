@@ -21,3 +21,13 @@ function updateEquity() {
 
 depositeInput.addEventListener('input', updateEquity);
 pnlInput.addEventListener('input', updateEquity);
+
+function saveData() {
+    const saveEquity = document.getElementById('equity');
+
+    if(saveEquity.trim() == "") {
+        return;
+    }
+
+    localStorage.setItem("totalEquity", saveEquity);
+}
