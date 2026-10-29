@@ -17,17 +17,35 @@ function updateEquity() {
     const totalEquity = deposite + pnl;
 
     displayEquity.textContent = `$${totalEquity.toLocaleString('en-US')}`;
+
+    localStorage.setItem('equity', equity);
 }
 
 depositeInput.addEventListener('input', updateEquity);
 pnlInput.addEventListener('input', updateEquity);
 
-function saveData() {
-    const saveEquity = document.getElementById('equity');
+// Save Data Equity In Local Storage
+window.addEventListener('DOMContentLoaded', () => {
+    const saveDeposite = localStorage.getItem('deposite');
+    const savePnl = localStorage.getItem('pnl');
 
-    if(saveEquity.trim() == "") {
-        return;
+    if(saveDeposite !== null) {
+        depositeInput.value = saveDeposite;
     }
 
-    localStorage.setItem("totalEquity", saveEquity);
-}
+    if (savePnl !== null) {
+        pnlInput.value = savePnl;
+    }
+
+    updateEquity();
+});
+
+depositeInput.addEventListener('input', function() {
+    localStorage.setItem('deposite', depositeInput.value);
+    updateEquity();
+});
+
+pnlInput.addEventListener('input', function(){
+    localStorage.setItem('pnl', pnlInput.value);
+    updateEquity();
+});
