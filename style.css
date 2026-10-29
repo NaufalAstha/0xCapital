@@ -139,28 +139,3 @@ body{
     background: var(--secBackground);
     color: var(--color);
 }
-
-.main-content .tradeBtn {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-
-    width: 20%;
-    height: 8vh;
-    margin: 2vh;
-    gap: 1vh;
-    
-    border-radius: 1.5vh;
-    background: var(--secBackground);
-
-    font-weight: bold;
-    font-size: 20px;
-
-    cursor: pointer;
-    transition: ease 0.3s;
-}
-
-.main-content .tradeBtn:hover{
-    background: var(--highlight);
-}
