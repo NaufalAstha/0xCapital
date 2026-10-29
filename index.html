@@ -45,7 +45,7 @@
 
             <div class="container">
                 <p class="headline">RPT :</p>
-                <p id="pnl">$0</p>
+                <p id="pnl">1%</p>
             </div>
         </div>
 
@@ -56,15 +56,20 @@
 
     <script>
         const currentDeposite = localStorage.getItem('deposite');
-        const currentEquity = localStorage.getItem('equity').textContent;
+        const currentNet = localStorage.getItem('pnl');
+        const currentEquity = localStorage.getItem('equity');
 
         if (currentDeposite) {
             document.getElementById('deposite').textContent = `$${currentDeposite}`;
         }
 
-        if (currentEquity) {
-            document.getElementById('equity').textContent = `$${currentEquity}`;
+        if (currentNet) {
+            document.getElementById('pnl').textContent = `$${currentNet}`;
         }
+
+        const totalEquity = updateEquity();
+
+        document.getElementById('equity').textContent = `$${totalEquity}`;
     </script>
 </body>
 </html>
