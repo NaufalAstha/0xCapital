@@ -34,13 +34,18 @@
             </div>
 
             <div class="container">
-                <p class="headline">Deposite :</p>
+                <p class="headline">Net :</p>
                 <p id="deposite">0</p>
             </div>
 
             <div class="container">
-                <p class="headline">Net :</p>
+                <p class="headline">RPT :</p>
                 <p id="pnl">$32</p>
+            </div>
+
+            <div class="container">
+                <p class="headline">RPT :</p>
+                <p id="rpt">$32</p>
             </div>
 
             <div class="tradeBtn" id="tradeBtn">
@@ -56,6 +61,7 @@
     <script>
         const currentDeposite = localStorage.getItem('deposite');
         const currentEquity = localStorage.getItem('equity').textContent;
+        const riskElement = document.getElementById('rpt');
 
         if (currentDeposite) {
             document.getElementById('deposite').textContent = `$${currentDeposite}`;
@@ -63,6 +69,10 @@
 
         if (currentEquity) {
             document.getElementById('equity').textContent = `$${currentEquity}`;
+        }
+        
+        if (riskElement) {
+            riskElement.textContent = `$${risk.toFixed(2)}`;
         }
     </script>
 </body>

@@ -25,6 +25,13 @@ function updateEquity() {
     localStorage.setItem('equity', equity);
 }
 
+function updateRiskPerTrade() {
+    const equity = parseFloat(localStorage.getItem('equity')) || 0;
+
+    const riskPerTrade = equity * 0.01;
+    return riskPerTrade;
+}
+
 depositeInput.addEventListener('input', updateEquity);
 pnlInput.addEventListener('input', updateEquity);
 
