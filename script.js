@@ -10,6 +10,10 @@ document.getElementById("account-btn").addEventListener("click", function() {
     window.location.href= "../page/account.html";
 });
 
+document.getElementById("tradeBtn").addEventListener("click", function() {
+    window.location.href= "page/trade.html";
+});
+
 function updateEquity() {
     const deposite = parseFloat(depositeInput.value) || 0;
     const pnl = parseFloat(pnlInput.value) || 0;
