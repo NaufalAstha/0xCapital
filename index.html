@@ -30,12 +30,12 @@
         <div class="topbar">
             <div class="container">
                 <p class="headline">Equity :</p>
-                <span id="equity" class="equityValue">$1000</span>
+                <span id="equity" class="equityValue">0</span>
             </div>
 
             <div class="container">
-                <p class="headline">RPT :</p>
-                <p id="rpt">1%</p>
+                <p class="headline">Deposite :</p>
+                <p id="deposite">0</p>
             </div>
 
             <div class="container">
@@ -48,5 +48,18 @@
     </div>
 
     <script src="script.js"></script>
+
+    <script>
+        const currentDeposite = localStorage.getItem('deposite');
+        const currentEquity = localStorage.getItem('equity');
+
+        if (currentDeposite) {
+            document.getElementById('deposite').textContent = `$${currentDeposite}`;
+        }
+
+        if (currentEquity) {
+            document.getElementById('equity').textContent = `$${currentEquity}`;
+        }
+    </script>
 </body>
 </html>
