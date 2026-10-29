@@ -40,7 +40,7 @@
 
             <div class="container">
                 <p class="headline">Net :</p>
-                <p id="net">$32</p>
+                <p id="pnl">$32</p>
             </div>
         </div>
 
@@ -51,7 +51,7 @@
 
     <script>
         const currentDeposite = localStorage.getItem('deposite');
-        const currentEquity = localStorage.getItem('equity');
+        const currentEquity = localStorage.getItem('equity').textContent;
 
         if (currentDeposite) {
             document.getElementById('deposite').textContent = `$${currentDeposite}`;
