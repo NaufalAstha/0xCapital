@@ -151,7 +151,7 @@ body{
     margin: 2vh;
     gap: 1vh;
     
-    border-radius: 2.5vh;
+    border-radius: 1.5vh;
     background: var(--secBackground);
 
     font-weight: bold;
