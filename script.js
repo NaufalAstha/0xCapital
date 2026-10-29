@@ -15,14 +15,14 @@ document.getElementById("tradeBtn").addEventListener("click", function() {
 });
 
 function updateEquity() {
-    const deposite = parseFloat(depositeInput.value) || 0;
-    const pnl = parseFloat(pnlInput.value) || 0;
-
+    const deposite = parseFloat(localStorage.getItem('deposite')) || 0;
+    const pnl = parseFloat(localStorage.getItem('pnl')) || 0;
+    
+    const modalAwal = deposite;
     const totalEquity = deposite + pnl;
 
-    displayEquity.textContent = `$${totalEquity.toLocaleString('en-US')}`;
-
-    localStorage.setItem('equity', equity);
+    localStorage.setItem('equity', totalEquity);
+    return totalEquity;
 }
 
 depositeInput.addEventListener('input', updateEquity);

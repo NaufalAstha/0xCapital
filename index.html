@@ -45,7 +45,7 @@
 
             <div class="container">
                 <p class="headline">RPT :</p>
-                <p id="pnl">1%</p>
+                <p id="rpt">1%</p>
             </div>
         </div>
 
@@ -57,7 +57,6 @@
     <script>
         const currentDeposite = localStorage.getItem('deposite');
         const currentNet = localStorage.getItem('pnl');
-        const currentEquity = localStorage.getItem('equity');
 
         if (currentDeposite) {
             document.getElementById('deposite').textContent = `$${currentDeposite}`;
@@ -67,9 +66,16 @@
             document.getElementById('pnl').textContent = `$${currentNet}`;
         }
 
-        const totalEquity = updateEquity();
-
-        document.getElementById('equity').textContent = `$${totalEquity}`;
+        if (typeof updateEquity === 'function') {
+            const totalEquity = updateEquity();
+            document.getElementById('equity').textContent = `$${totalEquity}`;
+        } else {
+            // Fallback manual jika fungsi belum dibuat di script.js
+            const dep = parseFloat(currentDeposite) || 0;
+            const net = parseFloat(currentNet) || 0;
+            const equity = 1000 + dep + net; // Sesuaikan modal awal Anda
+            document.getElementById('equity').textContent = `$${equity}`;
+        }
     </script>
 </body>
 </html>
