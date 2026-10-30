@@ -134,8 +134,27 @@ body{
     color: var(--color);
 }
 
-.main-content .container button{
+.main-content .tradeBtn{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 5vh;
+    margin: 2vh;
+    gap: 1vh;
+    
+    border-radius: 2.5vh;
+    background: var(--secBackground);
+
+    font-weight: bold;
+}
+
+.main-content .tradeBtn button{
     border: none;
     background: var(--secBackground);
     color: var(--color);
+
+    cursor: pointer;
 }
