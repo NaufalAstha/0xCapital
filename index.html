@@ -70,11 +70,15 @@
             const totalEquity = updateEquity();
             document.getElementById('equity').textContent = `$${totalEquity}`;
         } else {
-            // Fallback manual jika fungsi belum dibuat di script.js
             const dep = parseFloat(currentDeposite) || 0;
             const net = parseFloat(currentNet) || 0;
-            const equity = 1000 + dep + net; // Sesuaikan modal awal Anda
+            const equity = dep + net;
             document.getElementById('equity').textContent = `$${equity}`;
+        }
+
+        if (typeof updateRPT == 'function') {
+            const rptResult = updateRPT();
+            document.getElementById('rpt').textContent = `$${rptHasil.toFixed(2)}`;
         }
     </script>
 </body>

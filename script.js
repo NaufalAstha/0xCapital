@@ -25,6 +25,14 @@ function updateEquity() {
     return totalEquity;
 }
 
+function updateRPT() {
+    const equity = parseFloat(localStorage.getItem('equity')) || 0;
+    const RPT = 0.01;
+    const rptValue = equity * RPT;
+    
+    return rptValue;
+}
+
 depositeInput.addEventListener('input', updateEquity);
 pnlInput.addEventListener('input', updateEquity);
 
