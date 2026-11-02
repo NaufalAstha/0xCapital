@@ -3,82 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0xCapital - Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>0xTerminal</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <Div class="sidebar">
-        <aside>
-            <div class="logo" id="logo">0xCapital</div>
-            <ul>
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="page/trade.html">Trade</a></li>
-                <li><a href="page/jurnal.html">Jurnal</a></li>
-                <li><a href="#">Performance</a></li>
-                <li><a href="#">Calculator</a></li>
-                <li><a href="page/chart.html">Chart</a></li>
-                <li><a href="#">Jesse AI</a></li>
-            </ul>
-            <button type="button" id="account-btn">
-                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="photo-profile">
-                <p>Account</p>
-            </button>
-        </aside>
-    </Div>
-
-    <div class="main-content">
-        <div class="topbar">
-            <div class="container">
-                <p class="headline">Equity :</p>
-                <span id="equity" class="equityValue">0</span>
+    <div class="terminal-panel" id="terminal">
+        <div class="terminal-header" id="terminalHeader">
+            <div class="window-buttons">
+                <span class="btn btn-close"></span>
+                <span class="btn btn-minimize"></span>
+                <span class="btn btn-maximize"></span>
             </div>
-
-            <div class="container">
-                <p class="headline">Net :</p>
-                <p id="pnl">$0</p>
-            </div>
-
-            <div class="container">
-                <p class="headline">RPT :</p>
-                <p id="rpt">1%</p>
-            </div>
-
-            <div class="tradeBtn">
-                <button>Trade</button>
-            </div>
+            <span class="terminal-title">bash -- 80x24</span>
+            <div></div>
         </div>
 
-        <p>Welcome To 0xCapital</p>
+        <div class="terminal-body">
+            <p><span class="prompt">user@localhost:~$</span> echo "Panel terminal siap digunakan!"</p>
+            <p>Panel terminal siap digunakan!</p>
+            <p><span class="prompt">user@localhost:~$</span> <span id="cursor">_</span></p>
+        </div>
     </div>
-
-    <script src="script.js"></script>
-
-    <script>
-        const currentDeposite = localStorage.getItem('deposite');
-        const currentNet = localStorage.getItem('pnl');
-
-        if (currentDeposite) {
-            document.getElementById('deposite').textContent = `$${currentDeposite}`;
-        }
-
-        if (currentNet) {
-            document.getElementById('pnl').textContent = `$${currentNet}`;
-        }
-
-        if (typeof updateEquity === 'function') {
-            const totalEquity = updateEquity();
-            document.getElementById('equity').textContent = `$${totalEquity}`;
-        } else {
-            const dep = parseFloat(currentDeposite) || 0;
-            const net = parseFloat(currentNet) || 0;
-            const equity = dep + net;
-            document.getElementById('equity').textContent = `$${equity}`;
-        }
-
-        if (typeof updateRPT == 'function') {
-            const rptResult = updateRPT();
-            document.getElementById('rpt').textContent = `$${rptResult.toFixed(2)}`;
-        }
-    </script>
+<script src="js/widgets.js"></script>
 </body>
 </html>
